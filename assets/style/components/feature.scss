@@ -2,8 +2,12 @@
 .feature {
    position: relative;
    overflow: hidden;
-   height: 359px;
-   border-radius: 8px;
+   height: 250px;
+   border-radius: $border-radius;
+
+   @include media-breakpoint-up(md) {
+      height: 359px;
+   }
 
    &::after {
       content: '';

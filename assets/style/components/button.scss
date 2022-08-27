@@ -1,0 +1,19 @@
+.btn {
+   border-radius: $border-radius;
+   cursor: pointer;
+   outline: none;
+   border: 0;
+   padding: 14px 32px;
+   font-weight: 400;
+   font-size: 15px;
+   line-height: 22px;
+   @include colorBtn($white, $primary, $blue200);
+
+   &--light {
+      @include colorBtn($primary, $white, $gray);
+   }
+
+   @include media-breakpoint-up(sm) {
+      font-size: 16px;
+   }
+}

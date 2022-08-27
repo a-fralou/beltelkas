@@ -1,7 +1,15 @@
 .section{
-padding: 50px 0;
+padding: 25px 0;
+
+@include media-breakpoint-up(sm) {
+   padding: 50px 0;
+}
 
    &--gray{
-      background: #F9F9F9;
+      background: $gray;
+   }
+
+   &--intro {
+      padding-top: 0;
    }
 }

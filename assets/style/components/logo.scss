@@ -1,0 +1,11 @@
+.logo {
+    cursor: pointer;
+    display: inline-block;
+    img {
+        vertical-align: middle;
+        width: 100px;
+        @include media-breakpoint-up(md) {
+            width: auto;
+        }
+    }
+}

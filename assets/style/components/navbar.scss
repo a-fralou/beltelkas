@@ -1,0 +1,31 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-nav {
+        display: flex;
+        align-items: center;
+        &__item {
+            &:not(:first-child) {
+                margin-left: 33px;
+            }
+
+            &:nth-child(1), &:nth-child(2) {
+                display: none;
+                @include media-breakpoint-up(md) {
+                    display: block;
+                }
+            }
+
+            a {
+                color: $dark;
+                font-weight: 700;
+                cursor: pointer;
+                transition: $transition;
+                &:hover, &:focus, &:active {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}

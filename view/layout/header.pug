@@ -1,9 +1,12 @@
 header.header
     .container
-        img(src="./assets/images/logo/beltel.svg").logo 
-        .navigation
-            button(type="button").btn
-                strong Для смарфонов
-            button(type="button").btn
-                strong Для компьютеров
-            button(type="button").btn Подключить
+        nav.navbar
+            a(href="/").logo
+                img(src="./assets/images/logo/beltel.svg")
+            ul.navbar-nav
+                li.navbar-nav__item
+                    a(href="#") Для смарфонов
+                li.navbar-nav__item
+                    a(href="#") Для компьютеров
+                li.navbar-nav__item
+                    button(type="button").btn Подключить

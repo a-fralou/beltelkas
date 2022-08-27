@@ -4,13 +4,10 @@
    line-height: 29px;
    color: rgba(18, 17, 39, 0.56);
    padding-top: 16px;
-   padding-bottom: 64px;
-}
-
-.title--h3 {
-   font-weight: 700;
-   font-size: 16px;
-   line-height: 22px;
+   padding-bottom: 32px;
+   @include media-breakpoint-up(lg) {
+      margin-bottom: 64px;
+   }
 }
 
 .steps-desc {

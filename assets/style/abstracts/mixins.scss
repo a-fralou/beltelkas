@@ -1,0 +1,8 @@
+@mixin colorBtn($color, $background, $actions) {
+    color: $color;
+    background: $background;
+    transition: $transition;
+    &:hover, &:active, &:focus {
+        background: $actions;
+    }
+ }

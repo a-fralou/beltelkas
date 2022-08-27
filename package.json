@@ -1,0 +1,30 @@
+{
+  "name": "beltelkas",
+  "version": "1.0.0",
+  "description": "",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "source": "index.pug",
+  "scripts": {
+    "start": "parcel index.pug ./assets/style/**/*.scss",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-fralou/beltelkas.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a-fralou/beltelkas/issues"
+  },
+  "homepage": "https://github.com/a-fralou/beltelkas#readme",
+  "devDependencies": {
+    "@parcel/transformer-pug": "^2.7.0",
+    "@parcel/transformer-sass": "^2.7.0",
+    "parcel": "^2.7.0"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.0"
+  }
+}

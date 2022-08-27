@@ -1,5 +1,9 @@
 html, body, * {
-    font-family: 'Open Sans', sans-serif !important;
+    font-family: 'Open Sans', sans-serif;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
 }
 
 body {

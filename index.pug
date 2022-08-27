@@ -2,8 +2,8 @@ doctype html
 html(lang="ru")
     head
         include ./view/meta.pug
-        include ./view/feature.pug
     body
-        button(type="button").btn.btn-primary Launch demo modal
-
+        include ./view/layout/header.pug
+        include ./view/feature.pug
+        
         script(src="./assets/js/index.js", type="module") 

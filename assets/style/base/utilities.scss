@@ -2,6 +2,10 @@
    margin-bottom: 24px;
 }
 
+.mb-2{
+   margin-bottom: 64px;
+}
+
 .mb {
    &-md-0 {
       @include media-breakpoint-up(md) {
@@ -9,3 +13,5 @@
       }
    }
 }
+
+

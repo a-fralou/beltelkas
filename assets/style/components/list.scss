@@ -1,0 +1,29 @@
+.list {
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 22px;
+   
+
+   &__item {
+      position: relative;      
+      display: flex;
+      align-items: center;
+      padding-left: 30px;
+
+      &:not(:last-child){
+         padding-bottom: 18px;
+      }
+
+      &::before {
+         content: '';
+         position: absolute;
+         left: 0;
+         display: block;
+         height: 25px;
+         width: 25px;
+         background-image: url(../images/circle-success.svg);
+         background-repeat: no-repeat;
+         background-size: contain;
+      }
+   }
+}

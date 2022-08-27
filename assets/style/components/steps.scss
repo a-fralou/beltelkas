@@ -1,0 +1,19 @@
+.desc {
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 29px;
+   color: rgba(18, 17, 39, 0.56);
+   padding-top: 16px;
+   padding-bottom: 32px;
+   @include media-breakpoint-up(lg) {
+      margin-bottom: 64px;
+   }
+}
+
+.steps-desc {
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 25px;
+   color: rgba(18, 17, 39, 0.56);
+   padding-top: 16px;
+}

@@ -15,12 +15,23 @@
    }
 
    &--h2 {
-      font-size: 32px;
-      line-height: 45px;
+      font-size: 20px;
+      line-height: 36px;
+      @include media-breakpoint-up(sm) {
+         font-size: 32px;
+         line-height: 45px;
+      }
+   }
+
+   &--h3 {
+      font-size: 16px;
+      line-height: 22px;
    }
 
    &--text-center {
-      text-align: center;
+      @include media-breakpoint-up(sm) {
+         text-align: center;
+      }
    }
 
    &--mb-1{
@@ -32,7 +43,23 @@
    }
 
    &--mb-3{
-      margin-bottom: 40px;
+      margin-bottom: 20px;
+      @include media-breakpoint-up(sm) {
+         margin-bottom: 40px;
+      }
    }
+
+   span{
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+   }
+
+   .badge {
+      margin-left: 20px;
+   }
+
+
+   
 }
 

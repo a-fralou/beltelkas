@@ -1,0 +1,29 @@
+.content-img {
+   position: relative;
+   overflow: hidden;
+   height: 300px;
+   border-radius: $border-radius;
+   margin-top: 30px;
+   @include media-breakpoint-up(md) {
+      height: 500px;
+   }
+
+  @include media-breakpoint-up(lg) {
+   margin-top: 0;
+   height: 100%;
+   }
+
+   &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+   }
+}
+
+.small-paragraph {
+   display: block;
+   font-weight: 400;
+   font-size: 10px;
+   line-height: 14px;
+}

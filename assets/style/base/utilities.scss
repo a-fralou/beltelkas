@@ -9,6 +9,10 @@
    }
 }
 
+.mb-4{
+   margin-bottom: 20px;
+}
+
 .mb {
    &-md-0 {
       @include media-breakpoint-up(md) {

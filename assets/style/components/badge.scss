@@ -8,4 +8,22 @@
     line-height: 180%;
     color: #009982;
     background: #E4FFFB;
+
+    @include colorBadge($green, $green300);
+
+    &--violet {
+        @include colorBadge($violet, $violet100);
+     }
+
+     &--blue {
+        @include colorBadge($blue, $blue100);
+     }
+
+     &--green {
+        @include colorBadge($green100, $green200);
+     }
+
+     &--gold {
+        @include colorBadge($gold, $gold100);
+     }
 }

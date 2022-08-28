@@ -5,4 +5,9 @@
     &:hover, &:active, &:focus {
         background: $actions;
     }
- }
+}
+
+@mixin colorBadge($color, $background) {
+    color: $color;
+    background: $background;
+}

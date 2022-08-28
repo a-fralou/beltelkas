@@ -5,13 +5,15 @@ section.section.section--gray
          -
             let features = [
                { title: 'Защита приватности', class: 'col-md-6 col-lg-4', classFeature: ' mb-1', img: './assets/images/img1.png' },
-               { title: 'Поиск украденного <br>смартфона, Анти-вор', class: 'col-md-6 col-lg-4', classFeature: ' mb-1', img: './assets/images/img2.png' },
-               { title: 'Максимальная защита <br>для 2 любых утройств', class: 'col-md-6 col-lg-4', classFeature: ' mb-1', img: './assets/images/img3.png' },
-               { title: 'Защита платежей в защишённом <br>браузере', class: 'col-md-6', classFeature: ' mb-1 mb-md-0', img: './assets/images/img4.png' },
-               { title: 'Защита детей и менеджер паролей - <br>бесплатно!', class: 'col-md-12 col-lg-6', classFeature: '', img: './assets/images/img5.png' },
+               { title: 'Поиск украденного\nсмартфона, Анти-вор', class: 'col-md-6 col-lg-4', classFeature: ' mb-1', img: './assets/images/img2.png' },
+               { title: 'Максимальная защита\nдля 2 любых утройств', class: 'col-md-6 col-lg-4', classFeature: ' mb-1', img: './assets/images/img3.png' },
+               { title: 'Защита платежей в защишённом\nбраузере', class: 'col-md-6', classFeature: ' mb-1 mb-md-0', img: './assets/images/img4.png' },
+               { title: 'Защита детей и менеджер паролей -\nбесплатно!', class: 'col-md-12 col-lg-6', classFeature: '', img: './assets/images/img5.png' },
             ];
          each item in features
             div(class=item.class)
                div(class="feature" + item.classFeature) 
-                  img.feature__img(src=`${item.img}`, alt="")
+                  picture
+                     source(srcset=`${item.img}?as=webp` type="image/webp")
+                     img(src=`${item.img}`, alt=`${item.title}`).feature__img
                   p.feature__info= item.title

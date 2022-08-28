@@ -3,7 +3,9 @@ section.section
       .row 
          .col-md-12.col-lg-6
             .content-img
-               img.content-img__img(src="./assets/images/1.png", alt="")
+               picture
+                  source(srcset="./assets/images/1.png?as=webp" type="image/webp")
+                  img.content-img__img(src="./assets/images/1.png", alt="Kaspersky Internet Security для семьи")
          .col-md-12.col-lg-6
             h2.title.title--h2.mb-1 Kaspersky Internet Security <br>
                span для Android

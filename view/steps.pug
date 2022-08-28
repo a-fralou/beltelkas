@@ -18,4 +18,6 @@ section.section.section--gray
                      p.steps-desc= item.description
          .col-md-12.col-lg-6
             .content-img
-               img.content-img__img(src="./assets/images/steps.png", alt="")
+               picture
+                  source(srcset="./assets/images/steps.png?as=webp" type="image/webp")
+                  img.content-img__img(src="./assets/images/steps.png", alt="Как активировать премиум-подписку Kaspersky ?")

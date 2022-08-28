@@ -1,7 +1,9 @@
 section.section.section--intro
     .container
         .intro
-            img(src="./assets/images/intro.png").intro__img
+            picture
+                source(srcset="./assets/images/intro.png?as=webp" type="image/webp")
+                img(src="./assets/images/intro.png" alt="Онлайн-защита от киберугроз").intro__img
             .intro__info
                 small.intro__pretitle Для абонентов Белтелеком
                 h1.title.title--h1.intro__title Онлайн-защита<br>от киберугроз

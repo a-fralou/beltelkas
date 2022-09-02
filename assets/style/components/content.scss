@@ -3,13 +3,11 @@
    overflow: hidden;
    height: 300px;
    border-radius: $border-radius;
-   margin-top: 30px;
    @include media-breakpoint-up(md) {
       height: 500px;
    }
 
   @include media-breakpoint-up(lg) {
-   margin-top: 0;
    height: 100%;
    }
 

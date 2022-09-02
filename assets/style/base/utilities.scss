@@ -1,15 +1,16 @@
-.mb-1{
+.mb-1 {
    margin-bottom: 24px;
 }
 
-.mb-2{
+.mb-2 {
    margin-bottom: 32px;
+
    @include media-breakpoint-up(lg) {
       margin-bottom: 64px;
    }
 }
 
-.mb-4{
+.mb-4 {
    margin-bottom: 20px;
 }
 
@@ -21,4 +22,16 @@
    }
 }
 
+.mb {
+   &-lg-0 {
+      @include media-breakpoint-up(lg) {
+         margin-bottom: 0px;
+      }
+   }
+}
 
+.order-2 {
+   @include media-breakpoint-up(lg) {
+      order: 1;
+   }
+}

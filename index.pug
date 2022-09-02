@@ -10,3 +10,29 @@ html(lang="ru")
         include ./view/choice.pug
         include ./view/steps.pug
         include ./view/layout/footer.pug
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="first">Open modal for @mdo</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="next">Open modal for @fat</button>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+            </div>
+            <div class="modal-body">
+                <form action="", method="post">
+                <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Recipient:</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                    <label for="message-text" class="col-form-label">Message:</label>
+                    <textarea class="form-control" id="message-text"></textarea>
+                </div>
+                </form>
+            </div>
+            </div>
+        </div>
+        </div>
+        script(src="./assets/js/index.js" type="module") 

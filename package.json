@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/a-fralou/beltelkas#readme",
   "devDependencies": {
+    "@parcel/transformer-js": "^2.7.0",
     "@parcel/transformer-pug": "^2.7.0",
     "@parcel/transformer-sass": "^2.7.0",
     "parcel": "^2.7.0",
@@ -26,6 +27,7 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.6",
-    "bootstrap": "^5.2.0"
+    "bootstrap": "^5.2.0",
+    "imask": "^6.4.2"
   }
 }

@@ -5,6 +5,19 @@
    height: 150px;
    background: #E5EEF5;
    border-radius: 12px;
+   border: 0;
+   cursor: pointer;
+   transition: $transition;
+
+   &:hover {
+      box-shadow: 10px 10px 33px 0px rgba(0,0,0,0.2);
+   }
+
+   &__count {
+      font-weight: 700;
+      font-size: 40px;
+      color: $primary;
+   }
 
    &__img {
       width: 83px;
@@ -13,7 +26,7 @@
       left: 50%;
       transform: translate(-50%, -40%);
 
-      &_small{
+      &--small{
          width: 50px;
       }
    }
@@ -22,7 +35,7 @@
       position: absolute;
       bottom: 11px;
       left: 13px;
-      color: rgba(0, 47, 108, 0.28);
+      color: $primary;
       font-weight: 700;
    }
 }

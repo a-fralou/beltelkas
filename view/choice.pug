@@ -7,18 +7,18 @@ section.section
          .col-md-12.col-lg-6
             .row 
                .col-md-6.mb-4
-                  .choice 
-                     img.choice__img(src="./assets/images/Users.svg", alt="")
+                  button.choice(type="button" data-bs-toggle="modal" data-bs-target="#phone-modal")
+                     img.choice__img(src="./assets/images/Users.svg", loading="lazy" alt="Для семьи")
                      p.choice__desc Для семьи
                .col-md-6.mb-4
-                  .choice 
-                     img.choice__img.choice__img_small(src="./assets/images/Group.svg", alt="")
+                  button.choice(type="button" data-bs-toggle="modal" data-bs-target="#pc-modal")
+                     img.choice__img.choice__img--small(src="./assets/images/Group.svg", loading="lazy" alt="Для смартфонов")
                      p.choice__desc Для смартфонов
                .col-md-6.mb-4.mb-md-0
-                  .choice 
-                     img.choice__img(src="./assets/images/Vector.svg", alt="")
+                  button.choice(type="button" data-bs-toggle="modal" data-bs-target="#phone-modal")
+                     img.choice__img(src="./assets/images/Vector.svg", loading="lazy" alt="Для компьютеров")
                      p.choice__desc Для компьютеров
                .col-md-6
-                  .choice 
-                     img.choice__img(src="./assets/images/devices.svg", alt="")
+                  button.choice(type="button" data-bs-toggle="modal" data-bs-target="#choice-modal")
+                     img.choice__img(src="./assets/images/devices.svg", loading="lazy" alt="Премиум защита")
                      p.choice__desc Премиум защита

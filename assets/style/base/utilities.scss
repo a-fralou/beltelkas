@@ -20,9 +20,13 @@
          margin-bottom: 0px;
       }
    }
-}
 
-.mb {
+   &-md-1 {
+      @include media-breakpoint-up(md) {
+         margin-bottom: 24px;
+      }
+   }
+
    &-lg-0 {
       @include media-breakpoint-up(lg) {
          margin-bottom: 0px;
@@ -30,8 +34,29 @@
    }
 }
 
-.order-2 {
-   @include media-breakpoint-up(lg) {
-      order: 1;
+.order {
+   &-lg {
+      @include media-breakpoint-up(lg) {
+         &-2 {
+            order: 1;
+         }
+      }
    }
+
+   &-md {
+      @include media-breakpoint-up(md) {
+         &-1 {
+            order: 1;
+         }
+
+         &-2 {
+            order: 2;
+         }
+      }
+   }
+}
+
+.align-bottom {
+   display: flex;
+   align-items: flex-end;
 }

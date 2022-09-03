@@ -1,0 +1,9 @@
+.modal-body {
+    &__title {
+        padding-right: 25px;
+
+        @include media-breakpoint-down(sm) {
+            line-height: 26px;
+        }
+    }
+}

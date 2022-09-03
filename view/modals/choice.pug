@@ -1,0 +1,19 @@
+.modal.fade(id="choice-modal" tabindex="-1" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            button.btn-close-modal(type="button" data-bs-dismiss="modal")
+            .modal-body
+                h2.title.title--h3.mb-1 Выберите колличество устройств:
+                .row 
+                    .col-md-6.mb-4
+                        button.choice(type="button" data-bs-toggle="modal" data-bs-target="#pc-modal")
+                            .choice__count 1
+                    .col-md-6.mb-4
+                        button.choice(type="button" data-bs-toggle="modal" data-bs-target="#pc-modal")
+                            .choice__count 2
+                    .col-md-6.mb-4.mb-md-0
+                        button.choice(type="button" data-bs-toggle="modal" data-bs-target="#pc-modal")
+                            .choice__count 3
+                    .col-md-6
+                        button.choice(type="button" data-bs-toggle="modal" data-bs-target="#pc-modal")
+                            .choice__count 4

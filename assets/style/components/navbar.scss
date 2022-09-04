@@ -16,15 +16,15 @@
                     display: block;
                 }
             }
+        }
 
-            a {
-                color: $dark;
-                font-weight: 700;
-                cursor: pointer;
-                transition: $transition;
-                &:hover, &:focus, &:active {
-                    opacity: 0.5;
-                }
+        &__link {
+            color: $dark;
+            font-weight: 700;
+            cursor: pointer;
+            transition: $transition;
+            &:hover, &:focus, &:active {
+                opacity: 0.5;
             }
         }
     }

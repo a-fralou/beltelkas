@@ -1,4 +1,4 @@
-section.section
+section.section#choice-section
    .container
       .row 
          .col-md-12.col-lg-6
@@ -7,18 +7,18 @@ section.section
          .col-md-12.col-lg-6
             .row 
                .col-md-6.mb-4
-                  button.choice(type="button" data-bs-toggle="modal" data-bs-target="#phone-modal")
+                  button.choice.js-btn-event(type="button" data-bs-toggle="modal" data-bs-target="#phone-modal" data-tariff-plan="family")
                      img.choice__img(src="./assets/images/Users.svg", loading="lazy" alt="Для семьи")
                      p.choice__desc Для семьи
                .col-md-6.mb-4
-                  button.choice(type="button" data-bs-toggle="modal" data-bs-target="#pc-modal")
+                  button.choice.js-btn-event(type="button" data-bs-toggle="modal" data-bs-target="#pc-modal" data-tariff-plan="smartphone")
                      img.choice__img.choice__img--small(src="./assets/images/Group.svg", loading="lazy" alt="Для смартфонов")
                      p.choice__desc Для смартфонов
                .col-md-6.mb-4.mb-md-0
-                  button.choice(type="button" data-bs-toggle="modal" data-bs-target="#phone-modal")
+                  button.choice.js-btn-event(type="button" data-bs-toggle="modal" data-bs-target="#phone-modal" data-tariff-plan="computer")
                      img.choice__img(src="./assets/images/Vector.svg", loading="lazy" alt="Для компьютеров")
                      p.choice__desc Для компьютеров
                .col-md-6
-                  button.choice(type="button" data-bs-toggle="modal" data-bs-target="#choice-modal")
+                  button.choice.js-btn-event(type="button" data-bs-toggle="modal" data-bs-target="#choice-modal")
                      img.choice__img(src="./assets/images/devices.svg", loading="lazy" alt="Премиум защита")
                      p.choice__desc Премиум защита

@@ -10,6 +10,11 @@ body,
     box-sizing: border-box;
 }
 
+html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
 }

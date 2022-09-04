@@ -1,25 +1,29 @@
-.modal.fade(id="phone-modal" tabindex="-1" aria-hidden="true")
+.modal.js-form-modal.fade(id="phone-modal" tabindex="-1" aria-hidden="true")
     .modal-dialog.modal-dialog-centered
         .modal-content
             button.btn-close-modal(type="button" data-bs-dismiss="modal")
             .modal-body
                 h2.title.title--h2.modal-body__title Пакет.Kaspersky Internet Security для Android + Kaspersky Safe Kids
                 p.desc.desc--small Нажимая кнопку «Подключить бесплатно» Вы соглашаетесь с активацией подписки Kaspersky Internet Security для Android + Kaspersky Safe Kids для Вашего номера лицевого счета, а также с <a class="desc--link" href="https://www.beltelecom.by/private/internet/additional-service/anti-virus-protection-services">Порядком оказания услуг</a>. Первые 30 дней бесплатно, далее 5 руб. / 30 дней для абонентов Белтелеком.
-                form.mb-1(action="" method="post")
+                form.mb-1(action="javascript:void(null);" method="post" data-form-api="phone.php")
                     .row
                         .col-md-7
-                            label.form-label(for="phone-field1") ВВЕДИТЕ СВОЙ НОМЕР ТЕЛЕФОНА:
-                            input.form-field.form-control.mb-1.mb-md-0(type="text" id="phone-field1")
+                            label.form-label ВВЕДИТЕ СВОЙ НОМЕР ТЕЛЕФОНА:
+                            .form-field
+                                input.form-field__input.form-control.mb-1.mb-md-0.js-mask-phone(type="text" name="phone")
+                                .form-error
                         .col-md-5.align-bottom
-                            button.btn.btn--fluid(type="button") Получить код
-                form(action="" method="post")
+                            button.btn.btn--fluid.js-fetch-form(type="button") Получить код
+                form.js-next-form(action="javascript:void(null);" method="post" data-form-api="code.php")
                     .row
                         .col-md-7
-                            label.form-label(for="code-field1") ВВЕДИТЕ КОД ИЗ SMS:
-                            input.form-field.form-control.mb-1(disabled type="text" id="code-field1")
+                            label.form-label ВВЕДИТЕ КОД ИЗ SMS:
+                            .form-field
+                                input.form-field__input.form-control.mb-1.js-mask-code(disabled type="text" name="code")
+                                .form-error
                         .col-md-7.order-md-2
-                            label.form-label(for="recipient-name") ПРОМОКОД 
+                            label.form-label ПРОМОКОД 
                                 small необязательное поле :
-                            input.form-control.mb-1.mb-md-0(type="text" id="code")
+                            input.form-control.mb-1.mb-md-0.js-get-promocode(type="text" name="promocode")
                         .col-md-5.align-bottom.order-sm-1
-                            button.btn.btn--fluid.mb-md-1(type="button" class="" disabled) Подключить
+                            button.btn.btn--fluid.mb-md-1.js-fetch-form(type="button" disabled) Подключить

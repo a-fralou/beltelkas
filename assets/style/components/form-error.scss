@@ -1,0 +1,11 @@
+.form-error {
+    position: absolute;
+    font-size: 13px;
+    color: red;
+    opacity: 0;
+    transition: $transition;
+    bottom: -18px;
+    &--show {
+        opacity: 1;
+    }
+}

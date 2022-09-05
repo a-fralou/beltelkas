@@ -11,7 +11,7 @@ const COUNT_DEVICE_LOCAL_STORAGE = 'countDevice';
 const PHONE_VALUE_FROM_MASK = 'phone';
 const CODE_VALUE_FROM_MASK = 'code';
 
-const settingsMasks = []
+const settingsMasks = [];
 
 const removeLocalData = () => {
   [PLAN_LOCAL_STORAGE, COUNT_DEVICE_LOCAL_STORAGE, PHONE_VALUE_FROM_MASK, CODE_VALUE_FROM_MASK].forEach(function (item) {
@@ -19,15 +19,15 @@ const removeLocalData = () => {
   });
 }
 
-const removeError = (element) => {
+const removeError = (element, className = 'js-set-error') => {
   const form = element.closest('form');
-  const error = form.getElementsByClassName("form-error")[0];
+  const error = form.getElementsByClassName(className)[0];
   error.classList.remove("form-error--show")
   error.innerHTML = '';
 }
 
-const setError = (form, text = 'Error') => {
-  const error = form.getElementsByClassName("form-error")[0];
+const setError = (form, text = 'Error', className = 'js-set-error') => {
+  const error = form.getElementsByClassName(className)[0];
   error.classList.add("form-error--show")
   error.innerHTML = text;
 }
@@ -41,8 +41,8 @@ const modals = document.getElementsByClassName("js-form-modal");
 Array.from(modals).forEach(function (element) {
   element.addEventListener('hide.bs.modal', () => {
     removeLocalData()
-    const promocode = element.getElementsByClassName("js-get-promocode")[0];
-    promocode.value = '';
+    const contract = element.getElementsByClassName("js-get-contract")[0];
+    contract.value = '';
     const nextform = element.getElementsByClassName("js-next-form")[0];
     nextform.getElementsByClassName("js-mask-code")[0].setAttribute('disabled', 'disabled')
     nextform.getElementsByClassName("js-fetch-form")[0].setAttribute('disabled', 'disabled')
@@ -120,17 +120,31 @@ Array.from(eventsSubmitButton).forEach(function (element) {
 });
 
 async function submitForm() {
-  removeError(this)
-
   const form = this.closest('form');
   const modal = this.closest('.modal-body');
+  const parentContract = modal.getElementsByClassName('js-parent-contract');
   const url = form.getAttribute('data-form-api');
-  const promocode = modal.getElementsByClassName("js-get-promocode")[0];
-  const getFieldName = form.getElementsByClassName("form-field__input")[0]
+  const contract = modal.getElementsByClassName("js-get-contract")[0];
+  const getFieldName = form.getElementsByClassName("js-get-value")[0]
   const getPhoneValue = localStorage.getItem(PHONE_VALUE_FROM_MASK)
   const getCodeValue = localStorage.getItem(CODE_VALUE_FROM_MASK)
   const getPlanValue = localStorage.getItem(PLAN_LOCAL_STORAGE)
   const getDeviceValue = localStorage.getItem(COUNT_DEVICE_LOCAL_STORAGE)
+
+  removeError(this)
+  removeError(parentContract[0], 'form-error')
+
+
+  contract.addEventListener('input', function () {
+    if (this.value !== '') {
+      removeError(parentContract[0], 'form-error')
+    }
+  });
+
+  if (contract.value === '') {
+    setError(parentContract[0], 'Заполните договор!', 'form-error')
+    return;
+  }
 
   if (getFieldName.name === PHONE_VALUE_FROM_MASK && (!getPhoneValue || getPhoneValue.length < 12)) {
     setError(form, 'Заполните телефон!')
@@ -142,15 +156,13 @@ async function submitForm() {
     return;
   }
 
-  console.log(modal)
-
   this.classList.add("btn--load")
   this.setAttribute('disabled', 'disabled');
 
 
   const data = {
     plan: getPlanValue,
-    promocode: promocode.value,
+    contract: contract.value,
     phone: getPhoneValue,
     code: getCodeValue ? getCodeValue : '',
     devices: getDeviceValue ? getDeviceValue : '',

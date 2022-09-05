@@ -8,10 +8,15 @@
                 form.mb-1(action="javascript:void(null);" method="post" data-form-api="phone.php")
                     .row
                         .col-md-7
+                            label.form-label НОМЕР ДОГОВОРА 
+                            .form-field.js-parent-contract
+                                input.form-field__input.form-control.mb-1.js-get-contract(type="text" name="contract")
+                                .form-error
+                        .col-md-7
                             label.form-label ВВЕДИТЕ СВОЙ НОМЕР ТЕЛЕФОНА:
                             .form-field
-                                input.form-field__input.form-control.mb-1.mb-md-0.js-mask-phone(type="text" name="phone")
-                                .form-error
+                                input.form-field__input.form-control.mb-1.mb-md-0.js-mask-phone.js-get-value(type="text" name="phone")
+                                .form-error.js-set-error
                         .col-md-5.align-bottom
                             button.btn.btn--fluid.js-fetch-form(type="button") Получить код
                 form.js-next-form(action="javascript:void(null);" method="post" data-form-api="code.php")
@@ -19,11 +24,7 @@
                         .col-md-7
                             label.form-label ВВЕДИТЕ КОД ИЗ SMS:
                             .form-field
-                                input.form-field__input.form-control.mb-1.js-mask-code(disabled type="text" name="code")
-                                .form-error
-                        .col-md-7.order-md-2
-                            label.form-label ПРОМОКОД 
-                                small необязательное поле :
-                            input.form-control.mb-1.mb-md-0.js-get-promocode(type="text" name="promocode")
-                        .col-md-5.align-bottom.order-sm-1
+                                input.form-field__input.form-control.mb-1.js-mask-code.js-get-value(disabled type="text" name="code")
+                                .form-error.js-set-error
+                        .col-md-5.align-bottom
                             button.btn.btn--fluid.mb-md-1.js-fetch-form(type="button" disabled) Подключить
